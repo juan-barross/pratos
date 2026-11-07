@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Qual é o prato?</title>
+    <meta name="description" content="Reconhece 101 pratos pela foto, com o modelo rodando no seu navegador." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">Visão computacional · Food-101</p>
+        <h1>Qual é o prato?</h1>
+        <p class="lead">
+          Envie a foto de um prato e veja os 5 mais prováveis entre os 101 do Food-101. O modelo, um ConvNeXt-Tiny
+          ajustado, roda no seu navegador: a foto não sai daqui.
+        </p>
+      </header>
+
+      <form id="form">
+        <label class="dropzone" id="area" for="foto">
+          <strong>Escolha uma foto</strong>
+          <span>ou arraste para cá · JPG, PNG ou WebP</span>
+          <input id="foto" class="visually-hidden" type="file" accept="image/*" disabled />
+        </label>
+        <progress id="progresso" class="progress" max="100" value="0" aria-label="Download do modelo"></progress>
+        <p id="estado" class="muted counter" role="status">Baixando o modelo…</p>
+        <img id="previa" class="preview" alt="" hidden />
+      </form>
+
+      <section id="resultado" aria-labelledby="titulo-resultado" hidden>
+        <h2 id="titulo-resultado">Pratos mais prováveis</h2>
+        <p id="resumo" class="summary" role="status"></p>
+        <ol id="barras" class="bars"></ol>
+      </section>
+
+      <section class="about">
+        <h2>Como funciona</h2>
+        <p>
+          O ConvNeXt-Tiny, pré-treinado no ImageNet, foi ajustado nas 75.750 fotos de treino do Food-101 numa T4 do
+          Colab. Para rodar no navegador, o modelo foi convertido para ONNX e as camadas lineares foram quantizadas em
+          int8. A conversão é conferida contra o PyTorch nas fotos de teste antes de subir.
+        </p>
+        <p>
+          É o tipo de modelo que ajuda a organizar cardápio e catálogo a partir das fotos que os restaurantes enviam.
+          Ele só conhece os 101 pratos do Food-101, então pratos brasileiros como feijoada caem no mais parecido.
+        </p>
+        <p class="links">
+          <a href="https://github.com/juan-barross/pratos">Código no GitHub</a>
+          <a href="https://huggingface.co/juan1211/pratos-convnext-tiny-food101">Modelo no Hugging Face</a>
+        </p>
+      </section>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

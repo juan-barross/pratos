@@ -1,0 +1,268 @@
+{
+  "modelo": "juan1211/pratos-convnext-tiny-food101",
+  "base": "facebook/convnext-tiny-224",
+  "dados": "ethz/food101",
+  "revisoes": {
+    "dados": "83488de741c1bd1ce27aa6a2b33e19c7bdf92ca9",
+    "base": "6166b7613034066690a621d8bf25ffdf181a34f0"
+  },
+  "teste": {
+    "fotos": 25250,
+    "top1": {
+      "valor": 0.8731,
+      "ic95": [
+        0.869,
+        0.8772
+      ]
+    },
+    "top5": {
+      "valor": 0.9778,
+      "ic95": [
+        0.9759,
+        0.9796
+      ]
+    },
+    "erro_de_calibracao": 0.0432,
+    "cobertura_por_confianca": [
+      {
+        "limiar": 0.5,
+        "cobertura": 0.8797,
+        "acerto": 0.9349
+      },
+      {
+        "limiar": 0.7,
+        "cobertura": 0.7672,
+        "acerto": 0.9685
+      },
+      {
+        "limiar": 0.9,
+        "cobertura": 0.5912,
+        "acerto": 0.9912
+      }
+    ],
+    "piores_pratos": [
+      {
+        "prato": "steak",
+        "acerto": 0.556
+      },
+      {
+        "prato": "pork_chop",
+        "acerto": 0.632
+      },
+      {
+        "prato": "foie_gras",
+        "acerto": 0.664
+      },
+      {
+        "prato": "apple_pie",
+        "acerto": 0.688
+      },
+      {
+        "prato": "bread_pudding",
+        "acerto": 0.716
+      },
+      {
+        "prato": "ravioli",
+        "acerto": 0.732
+      },
+      {
+        "prato": "huevos_rancheros",
+        "acerto": 0.744
+      },
+      {
+        "prato": "chocolate_mousse",
+        "acerto": 0.744
+      },
+      {
+        "prato": "ceviche",
+        "acerto": 0.748
+      },
+      {
+        "prato": "tuna_tartare",
+        "acerto": 0.752
+      }
+    ],
+    "pares_confundidos": [
+      {
+        "prato": "steak",
+        "previsto": "filet_mignon",
+        "fotos": 52
+      },
+      {
+        "prato": "chocolate_cake",
+        "previsto": "chocolate_mousse",
+        "fotos": 29
+      },
+      {
+        "prato": "chocolate_mousse",
+        "previsto": "chocolate_cake",
+        "fotos": 24
+      },
+      {
+        "prato": "prime_rib",
+        "previsto": "steak",
+        "fotos": 23
+      },
+      {
+        "prato": "apple_pie",
+        "previsto": "bread_pudding",
+        "fotos": 22
+      },
+      {
+        "prato": "beef_tartare",
+        "previsto": "tuna_tartare",
+        "fotos": 20
+      },
+      {
+        "prato": "tuna_tartare",
+        "previsto": "beef_tartare",
+        "fotos": 20
+      },
+      {
+        "prato": "steak",
+        "previsto": "pork_chop",
+        "fotos": 18
+      },
+      {
+        "prato": "filet_mignon",
+        "previsto": "steak",
+        "fotos": 18
+      },
+      {
+        "prato": "pork_chop",
+        "previsto": "steak",
+        "fotos": 17
+      }
+    ]
+  },
+  "acerto_por_prato": {
+    "apple_pie": 0.688,
+    "baby_back_ribs": 0.88,
+    "baklava": 0.916,
+    "beef_carpaccio": 0.932,
+    "beef_tartare": 0.852,
+    "beet_salad": 0.788,
+    "beignets": 0.916,
+    "bibimbap": 0.916,
+    "bread_pudding": 0.716,
+    "breakfast_burrito": 0.828,
+    "bruschetta": 0.832,
+    "caesar_salad": 0.924,
+    "cannoli": 0.964,
+    "caprese_salad": 0.892,
+    "carrot_cake": 0.856,
+    "ceviche": 0.748,
+    "cheesecake": 0.788,
+    "cheese_plate": 0.928,
+    "chicken_curry": 0.816,
+    "chicken_quesadilla": 0.864,
+    "chicken_wings": 0.932,
+    "chocolate_cake": 0.788,
+    "chocolate_mousse": 0.744,
+    "churros": 0.916,
+    "clam_chowder": 0.924,
+    "club_sandwich": 0.916,
+    "crab_cakes": 0.828,
+    "creme_brulee": 0.932,
+    "croque_madame": 0.908,
+    "cup_cakes": 0.924,
+    "deviled_eggs": 0.964,
+    "donuts": 0.896,
+    "dumplings": 0.908,
+    "edamame": 1.0,
+    "eggs_benedict": 0.908,
+    "escargots": 0.936,
+    "falafel": 0.832,
+    "filet_mignon": 0.78,
+    "fish_and_chips": 0.92,
+    "foie_gras": 0.664,
+    "french_fries": 0.94,
+    "french_onion_soup": 0.912,
+    "french_toast": 0.832,
+    "fried_calamari": 0.888,
+    "fried_rice": 0.912,
+    "frozen_yogurt": 0.96,
+    "garlic_bread": 0.828,
+    "gnocchi": 0.816,
+    "greek_salad": 0.88,
+    "grilled_cheese_sandwich": 0.816,
+    "grilled_salmon": 0.856,
+    "guacamole": 0.952,
+    "gyoza": 0.916,
+    "hamburger": 0.876,
+    "hot_and_sour_soup": 0.956,
+    "hot_dog": 0.908,
+    "huevos_rancheros": 0.744,
+    "hummus": 0.868,
+    "ice_cream": 0.82,
+    "lasagna": 0.82,
+    "lobster_bisque": 0.884,
+    "lobster_roll_sandwich": 0.952,
+    "macaroni_and_cheese": 0.856,
+    "macarons": 0.968,
+    "miso_soup": 0.916,
+    "mussels": 0.936,
+    "nachos": 0.868,
+    "omelette": 0.832,
+    "onion_rings": 0.912,
+    "oysters": 0.96,
+    "pad_thai": 0.948,
+    "paella": 0.9,
+    "pancakes": 0.928,
+    "panna_cotta": 0.884,
+    "peking_duck": 0.876,
+    "pho": 0.932,
+    "pizza": 0.916,
+    "pork_chop": 0.632,
+    "poutine": 0.92,
+    "prime_rib": 0.864,
+    "pulled_pork_sandwich": 0.876,
+    "ramen": 0.888,
+    "ravioli": 0.732,
+    "red_velvet_cake": 0.916,
+    "risotto": 0.812,
+    "samosa": 0.876,
+    "sashimi": 0.932,
+    "scallops": 0.796,
+    "seaweed_salad": 0.948,
+    "shrimp_and_grits": 0.864,
+    "spaghetti_bolognese": 0.956,
+    "spaghetti_carbonara": 0.964,
+    "spring_rolls": 0.876,
+    "steak": 0.556,
+    "strawberry_shortcake": 0.868,
+    "sushi": 0.928,
+    "tacos": 0.852,
+    "takoyaki": 0.968,
+    "tiramisu": 0.852,
+    "tuna_tartare": 0.752,
+    "waffles": 0.928
+  },
+  "latencia_cpu": {
+    "mediana_ms": 119.3,
+    "p95_ms": 175.2,
+    "vcpus": 2,
+    "threads": 1
+  },
+  "treino": {
+    "num_train_epochs": 3,
+    "learning_rate": 0.0002,
+    "per_device_train_batch_size": 64,
+    "lr_scheduler_type": "cosine",
+    "warmup_steps": 200,
+    "seed": 2027,
+    "minutos": 26.7,
+    "fotos_por_segundo": 141.7,
+    "perda_final": 0.7378,
+    "gpu": "Tesla T4"
+  },
+  "versoes": {
+    "torch": "2.11.0+cu130",
+    "torchvision": "0.26.0+cu130",
+    "transformers": "5.22.1",
+    "datasets": "5.1.0",
+    "accelerate": "1.15.0",
+    "huggingface_hub": "2.4.0",
+    "pillow": "11.3.0"
+  }
+}

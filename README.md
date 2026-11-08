@@ -2,6 +2,8 @@
 
 Classificador de pratos por foto: o ConvNeXt-Tiny, pré-treinado no ImageNet, ajustado nas 101 classes do [Food-101](https://huggingface.co/datasets/ethz/food101). É o tipo de modelo que ajuda a organizar cardápio e catálogo a partir das fotos que os restaurantes enviam.
 
+[Testar com uma foto](https://huggingface.co/spaces/juan1211/pratos): o modelo roda no navegador, sem servidor. Top-1 de 87,3% no teste do Food-101.
+
 - Treino e avaliação: [`notebooks/treino.ipynb`](notebooks/treino.ipynb), numa T4 do Colab.
 - Conversão para o navegador: [`notebooks/exportar_onnx.ipynb`](notebooks/exportar_onnx.ipynb) exporta para ONNX com o próprio PyTorch, quantiza as camadas lineares em int8 e confere o resultado contra o PyTorch.
 - Modelo: [juan1211/pratos-convnext-tiny-food101](https://huggingface.co/juan1211/pratos-convnext-tiny-food101).

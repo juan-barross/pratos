@@ -1,6 +1,5 @@
 :root {
   --color-primary: #1e3a5f;
-  --color-on-primary: #ffffff;
   --color-secondary: #2563eb;
   --color-accent: #a16207;
   --color-background: #f8fafc;
@@ -28,7 +27,6 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: #93c5fd;
-    --color-on-primary: #0b1220;
     --color-secondary: #60a5fa;
     --color-accent: #fbbf24;
     --color-background: #0b1220;
@@ -102,61 +100,9 @@ label {
   font-weight: 600;
 }
 
-textarea {
-  width: 100%;
-  min-height: 200px;
-  padding: var(--space-3);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  background: var(--color-background);
-  color: var(--color-foreground);
-  font: inherit;
-  resize: vertical;
-  transition: border-color var(--transition);
-}
-
-textarea:hover {
-  border-color: var(--color-muted-foreground);
-}
-
-textarea:focus-visible,
-button:focus-visible,
 a:focus-visible {
   outline: 2px solid var(--color-ring);
   outline-offset: 2px;
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  align-items: center;
-  margin-top: var(--space-4);
-}
-
-button {
-  min-height: 44px;
-  padding: 0 var(--space-6);
-  border: 0;
-  border-radius: 8px;
-  background: var(--color-primary);
-  color: var(--color-on-primary);
-  font: 600 1rem var(--font-sans);
-  cursor: pointer;
-  transition: opacity var(--transition), transform var(--transition);
-}
-
-button:hover:not(:disabled) {
-  opacity: 0.9;
-}
-
-button:active:not(:disabled) {
-  transform: translateY(1px);
-}
-
-button:disabled {
-  opacity: 0.6;
-  cursor: progress;
 }
 
 .counter {
@@ -188,8 +134,7 @@ button:disabled {
 }
 
 .label,
-.value,
-.term {
+.value {
   font-family: var(--font-mono);
   font-size: 0.875rem;
 }
@@ -220,39 +165,10 @@ button:disabled {
   font-variant-numeric: tabular-nums;
 }
 
-.marks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.marks li {
-  display: flex;
-  gap: var(--space-2);
-  align-items: baseline;
-  padding: var(--space-1) var(--space-3);
-  background: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-}
-
-.view {
-  color: var(--color-muted-foreground);
-  font-size: 0.75rem;
-}
-
 .about {
   margin-top: var(--space-12);
   padding-top: var(--space-2);
   border-top: 1px solid var(--color-border);
-}
-
-code {
-  font-family: var(--font-mono);
-  font-size: 0.9em;
 }
 
 .links {
@@ -360,4 +276,8 @@ a:hover {
 
 .summary strong.dish-name {
   font-family: var(--font-sans);
+}
+
+[hidden] {
+  display: none;
 }
